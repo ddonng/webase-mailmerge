@@ -7,4 +7,4 @@ RUN apt-get install -y libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqli
 RUN cd /home/Python-3.8.5/ && ./configure --enable-optimizations --with-ensurepip=install
 RUN cd /home/Python-3.8.5/ && make altinstall
 RUN pip3.8 install lxml
-RUN pip3.8 install docx-mailmerge-hxd==0.6.3
+RUN pip3.8 install docx-mailmerge-hxd==0.6.4
