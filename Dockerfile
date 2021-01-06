@@ -9,4 +9,4 @@ RUN cd /home/Python-3.8.5/ && make altinstall
 RUN pip3.8 install lxml
 RUN pip3.8 install docx-mailmerge-hxd==0.6.4
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 648ACFD622F3D138 && apt-get update && apt-get install -y poppler-utils
-RUN pip3.8 install pdf2image
+RUN pip3.8 install pdf2image qrcode redis
