@@ -7,6 +7,7 @@ RUN apt-get install -y libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqli
 RUN cd /home/Python-3.8.5/ && ./configure --enable-optimizations --with-ensurepip=install
 RUN cd /home/Python-3.8.5/ && make altinstall
 RUN pip3.8 install lxml
+RUN pip3.8 install docx-mailmerge-hxd==0.7.2
+RUN apt-get update && apt-get install -y vim
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 648ACFD622F3D138 && apt-get update && apt-get install -y poppler-utils
 RUN pip3.8 install pdf2image qrcode redis
-RUN pip3.8 install docx-mailmerge-hxd==0.7.2
