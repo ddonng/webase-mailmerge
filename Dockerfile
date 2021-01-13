@@ -1,6 +1,7 @@
 FROM ddonng/webasewithsoap:latest
 # RUN echo "deb http://mirrors.163.com/debian/ testing main" >> /etc/apt/sources.list
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 648ACFD622F3D138 && apt-get update && apt-get install -y wget && apt-get install -y openssl && apt-get install -y ca-certificates
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 648ACFD622F3D138 && apt-get update && apt-get install -y wget 
+RUN apt-get install -y libssl-dev libncurses5-dev libsqlite3-dev libreadline-dev libtk8.5 libgdm-dev libdb4o-cil-dev libpcap-dev
 RUN cd /home && wget -c https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tgz && tar -zxvf Python-3.8.5.tgz 
 RUN apt-get install -y build-essential
 RUN apt-get install -y libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev zlib1g-dev
